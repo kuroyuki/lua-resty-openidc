@@ -1,5 +1,5 @@
 package = "lua-resty-openidc"
-version = "1.7.6-4"
+version = "1.7.6-3"
 source = {
     url = "git+https://github.com/kuroyuki/lua-resty-openidc",
     tag = "v1.7.6",
