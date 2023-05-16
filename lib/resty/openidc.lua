@@ -1439,15 +1439,12 @@ end
 
 -- main routine for OpenID Connect user authentication
 function openidc.authenticate(opts, target_url, unauth_action, session_or_opts)
-  log(DEBUG, "Opts: " .. opts)
-  log(DEBUG, "Target URL: " .. target_url)
-  log(DEBUG, "session_or_opts" .. session_or_opts)
   if opts.redirect_uri_path then
     log(WARN, "using deprecated option `opts.redirect_uri_path`; switch to using an absolute URI and `opts.redirect_uri` instead")
   end
 
   local err
-
+  log(DEBUG, "Logging session " .. session_or_opts)
   local session
   if is_session(session_or_opts) then
     session = session_or_opts
